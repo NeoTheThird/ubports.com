@@ -7,8 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET deveopers page. */
+router.get('/team', function(req, res, next) {
+  res.render('team');
+});
 router.get('/developers', function(req, res, next) {
-  res.render('developers');
+  res.redirect("/team");
 });
 
 /* GET get-involved page. */
@@ -20,5 +23,9 @@ router.get('/get-involved', function(req, res, next) {
 router.get('/sponsors', function(req, res, next) {
   res.render('sponsors');
 });
+
+router.get('/telegram', function(req, res, next) {
+  res.redirect("https://telegram.me/ubports");
+})
 
 module.exports = router;

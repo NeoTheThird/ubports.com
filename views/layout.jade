@@ -12,6 +12,7 @@ head
   link(href='css/bootstrap.css', rel='stylesheet')
   link(href='css/style.css', rel='stylesheet')
   link(href='css/ubuntu.css', rel='stylesheet')
+  link(rel="icon", type="image/png", href="/img/icon.png")
   // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
   // WARNING: Respond.js doesn't work if you view the page via file://
   //if lt IE 9
@@ -32,9 +33,13 @@ head
                 li
                   a(ng-click='opened = false', href='https://wiki.ubports.com') Wiki
                 li
+                  a(ng-click='opened = false', href='https://blog.ubports.com') Blog
+                li
                   a(ng-click='opened = false', href='/get-involved') Get Involved
                 li
-                  a(ng-click='opened = false', href='/developers') Developers
+                  a(ng-click='opened = false', href='/sponsors') Sponsors
+                li
+                  a(ng-click='opened = false', href='/team') Team
           a.navbar-brand.ng-cloak(href='/apps', ng-if="$state.current.name == 'app'")
             div(data-role='back-btn')
             | UBports
@@ -50,11 +55,13 @@ head
             li
               a(href='https://wiki.ubports.com') Wiki
             li
+              a(href='https://blog.ubports.com') Blog
+            li
               a(href='/get-involved') Get Involved
             li
               a(href='/sponsors') Sponsors
             li
-              a(href='/developers') Developers
+              a(href='/team') Team
 
     .container(data-role='content')
       block content
@@ -66,7 +73,7 @@ head
         p
           a(href="https://github.com/ubports/ubports.com") Edit this page
         p
-          | This site is maintained by 
+          | This site is maintained by
           a(href='/developers') The UBports Developers
           |  and is not an any way endorsed by or affiliated with
           a(href='http://ubuntu.com/')  Ubuntu
